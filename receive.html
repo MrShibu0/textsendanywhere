@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Anywhere - Receive Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📥 Receive Anywhere</h1>
+            <p class="subtitle">Enter code or use shareable link to receive text</p>
+            
+            <div class="form-group">
+                <label for="codeInput">Enter code:</label>
+                <input 
+                    type="text" 
+                    id="codeInput" 
+                    placeholder="Enter 6-character code"
+                    maxlength="6"
+                    autocomplete="off"
+                >
+            </div>
+            
+            <button id="receiveBtn" class="btn btn-primary">Receive</button>
+            
+            <div id="result" class="result hidden">
+                <div class="success-message">
+                    <h2>✅ Text received!</h2>
+                </div>
+                
+                <div class="text-display">
+                    <label>Received text:</label>
+                    <textarea id="receivedText" readonly rows="10"></textarea>
+                    <button id="copyTextBtn" class="btn btn-secondary">Copy Text</button>
+                </div>
+                
+                <div class="meta-info">
+                    <small id="metaInfo"></small>
+                </div>
+                
+                <button id="receiveAnotherBtn" class="btn btn-secondary">Receive Another</button>
+            </div>
+            
+            <div id="error" class="error hidden"></div>
+        </div>
+        
+        <div class="footer">
+            <a href="index.html">Send text instead →</a>
+        </div>
+    </div>
+    
+    <script src="receive.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Anywhere - Send Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📤 Send Anywhere</h1>
+            <p class="subtitle">Share text across devices instantly</p>
+            
+            <div class="form-group">
+                <label for="textInput">Enter your text:</label>
+                <textarea 
+                    id="textInput" 
+                    placeholder="Type or paste your text here... (max 5 KB)"
+                    rows="10"
+                    maxlength="5120"
+                ></textarea>
+                <div class="char-count">
+                    <span id="charCount">0</span> / 5120 characters
+                </div>
+            </div>
+            
+            <button id="sendBtn" class="btn btn-primary">Send</button>
+            
+            <div id="result" class="result hidden">
+                <div class="success-message">
+                    <h2>✅ Text sent successfully!</h2>
+                </div>
+                
+                <div class="code-display">
+                    <label>Your code:</label>
+                    <div class="code-box">
+                        <span id="codeDisplay"></span>
+                        <button id="copyCodeBtn" class="btn-icon" title="Copy code">
+                            📋
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="link-display">
+                    <label>Shareable link:</label>
+                    <div class="link-box">
+                        <input type="text" id="linkDisplay" readonly>
+                        <button id="copyLinkBtn" class="btn-icon" title="Copy link">
+                            📋
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="expiry-info">
+                    <small>This text will expire in 1 hour</small>
+                </div>
+                
+                <button id="sendAnotherBtn" class="btn btn-secondary">Send Another</button>
+            </div>
+            
+            <div id="error" class="error hidden"></div>
+        </div>
+        
+        <div class="footer">
+            <a href="receive.html">Receive text instead →</a>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
